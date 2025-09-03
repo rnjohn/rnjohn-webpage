@@ -1,0 +1,59 @@
+[
+  {
+    "company": "Jüsto",
+    "link": "www.justo.mx",
+    "job-title": "Software Engineer",
+    "from": "Jun. 2024",
+    "to": "Aug. 2025",
+    "descriptions": [
+      "Part of the 'Receipt & Transfers' team, helping move our products from provider to warehouse or from warehouse to warehouse.",
+      "Led development of the 'Receipt' API, making sure all compliance regarding products are being met",
+      "Ensured sending and receiving of notifications in multiple microservices to keep track and update accordingly the current, reserved and outgoing product stock in warehouses.",
+      "Continuously monitored the health of the Reception & Transfers microservice through Grafana and Kibana."
+    ],
+    "tech": ["Typescript", "Javascript", "NodeJS", "Express", "MongoDB", "React", "Docker", "AWS", "Kubernetes", "SQS", "SNS", "Grafana", "Kibana", "ArgoCD"]
+  },
+  {
+    "company": "Winter Break",
+    "link": "",
+    "job-title": "No position",
+    "from": "Nov. 2023",
+    "to": "May. 2024",
+    "descriptions": [
+      "Took some personal time to rest.",
+      "Delved into healthy habits and routines to have a more fulfilling life.",
+      "Used this time for introspection and re-kindled some passions like overall fitness."
+    ],
+    "tech": []
+  },
+  {
+    "company": "Microsoft",
+    "link": "www.microsoft.com",
+    "job-title": "Software Engineer",
+    "from": "May 2022",
+    "to": "Oct. 2023",
+    "descriptions": [
+      "Part of the Load Balancing team of Substrate, balancing the M365 data on servers all around the world.",
+      "Continuously worked and improved the “Monitoring Mailboxes” which let monitoring team know if a database was not working as intended or failing.",
+      "Shed more light on the “Drain” process (moving data from a server/db to another server/db) used by many teams, giving more visibility, observability and fixing bugs that prevented this process from working correctly",
+      "Took charge of checking the proper functioning of drains, by analyzing logs and checking up with customers around the world (freed 50+ petabytes of unused space, saving thousands of dollars).",
+      "Continuously monitored the health of the Load Balancing service, specifically in how the monitoring mailboxes were faring through Grafana.",
+      "Fixed assorted bugs related to the correct functioning of the Load Balancing Service."
+    ],
+    "tech": ["C#", ".NET", "Azure DevOps", "MySQL", "Kusto Query Language (KQL)", "Cosmos", "PowerBI", "Grafana"]
+  },
+  {
+    "company": "Horbath Technologies",
+    "link": "www.horbath.com",
+    "job-title": "Development Engineer",
+    "from": "Jun. 2020",
+    "to": "Mar. 2022",
+    "descriptions": [
+      "Led the development of the users creation feature of the web portal (database modeling, backend, frontend).",
+      "Developed the backend of a mobile app that let sellers from this company access their resources. Partially developed the app itself",
+      "Led the development of a feature that consisted of subscribing users to funeral insurances and letting them pay the subscription through the monthly gas bill.",
+      "Co-led development of the backend migration from Ruby on Rails to NodeJS."
+    ],
+    "tech": ["Typescript", "Javascript", "NodeJS", "NestJS", "React", "React Native", "Ruby on Rails", "PostgreSQL", "Redis", "Docker"]
+  }
+]
