@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+/* Typography setup */
+* {
+ @apply bg-[#FFF3DF] text-[#4E4D4D]
+}
+
+body {
+  @apply font-sans antialiased;
+}
+
+p {
+  @apply leading-relaxed;
+}
