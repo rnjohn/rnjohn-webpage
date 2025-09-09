@@ -1,6 +1,8 @@
 ---
 import "../styles/global.css";
 import "../styles/fonts.css";
+import Footer from "../components/footer/Footer.astro";
+import Header from "../components/header/Header.astro";
 const { title = "John Fontalvo" } = Astro.props;
 ---
 
@@ -14,6 +16,12 @@ const { title = "John Fontalvo" } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class="bg-gray-50 text-gray-900 font-sans">
-    <slot />
+    <Header />
+			<main>
+				<section class="flex flex-col p-12 border border-[#B3B3B3] max-w-6xl mx-auto">
+					<slot />
+				</section>
+			</main>
+		<Footer />
   </body>
 </html>
