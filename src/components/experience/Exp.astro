@@ -1,0 +1,23 @@
+---
+import experience from './experience.json'
+---
+
+<>
+  {experience.map(exp => (
+    <section class="py-3 max-w-4xl">
+      <h2 class="text-4xl font-bold ">
+          {exp.company}
+        </h2>
+        <p class="text-base">
+          {exp["job-title"]} <br />
+          {exp.from} – {exp.to}
+        </p>
+        <ul class="list-disc list-inside pt-4 font-regular text-lg">
+          {exp.descriptions.map(d => (
+            <li>{d}</li>
+          ))}
+          {!!exp.tech.length && <li class="font-bold">Tech used: {exp.tech.join(', ')}</li>}
+        </ul>
+    </section>
+  ))}
+</>
