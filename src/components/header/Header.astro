@@ -1,13 +1,16 @@
 ---
 const currentPath = Astro.url.pathname;
+const isRoot = currentPath === '/'
+const isExperience = currentPath.startsWith('/experience')
+const isProjects = currentPath.startsWith('/projects')
 ---
 
 <nav class="max-w-6xl mx-auto px-1">
   <div class="mx-auto px-4 py-4 flex justify-between items-center">
     <ul class="flex gap-15 text-xl">
-      <li><a href="/" class=`hover:text-blue-600 ${currentPath === '/' ? "font-bold" : "font-light"}`>About me</a></li>
-      <li><a href="/experience" class=`hover:text-blue-600 ${currentPath === '/experience' ? "font-bold" : "font-light"}`>Experience</a></li>
-      <li><a href="/projects" class=`hover:text-blue-600 ${currentPath === '/projects' ? "font-bold" : "font-light"}`>Projects</a></li>
+      <li><a href="/" class=`hover:text-blue-600 ${isRoot ? "font-bold" : "font-light"}`>About me</a></li>
+      <li><a href="/experience" class=`hover:text-blue-600 ${isExperience ? "font-bold" : "font-light"}`>Experience</a></li>
+      <li><a href="/projects" class=`hover:text-blue-600 ${isProjects ? "font-bold" : "font-light"}`>Projects</a></li>
     </ul>
   </div>
 </nav>
