@@ -5,14 +5,14 @@ import experience from './experience.json'
 <>
   {experience.map(exp => (
     <section class="py-3 max-w-4xl">
-      <h2 class="text-4xl font-bold ">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold ">
           <a href={exp.link} class={exp.link ? "underline" : ""}>{exp.company}</a>
         </h2>
-        <p class="font-light text-x">
+        <p class="font-light text-sm sm:text-base md:text-lg">
           {exp["job-title"]} <br />
           {exp.from} – {exp.to}
         </p>
-        <ul class="list-disc list-inside pt-4 font-light text-lg">
+        <ul class="list-disc list-inside pt-4 font-light text-base sm:text-lg md:text-xl">
           {exp.descriptions.map(d => (
             <li>{d}</li>
           ))}

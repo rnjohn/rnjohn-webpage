@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 /* Typography setup */
-* {
- @apply bg-[#FFF3DF] text-[#4E4D4D]
+html, body {
+ @apply bg-[#FFF3DF] text-[#4E4D4D];
 }
 
 body {

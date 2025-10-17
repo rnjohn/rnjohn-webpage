@@ -4,13 +4,46 @@ const isRoot = currentPath === '/'
 const isExperience = currentPath.startsWith('/experience')
 const isProjects = currentPath.startsWith('/projects')
 ---
-
-<nav class="max-w-6xl mx-auto px-1">
-  <div class="mx-auto px-4 py-4 flex justify-between items-center">
+<div class="max-w-6xl mx-auto px-4 py-4 flex justify-between">
+  <nav class="hidden md:block">
     <ul class="flex gap-15 text-xl">
-      <li><a href="/" class=`hover:text-blue-600 ${isRoot ? "font-bold" : "font-light"}`>About me</a></li>
-      <li><a href="/experience" class=`hover:text-blue-600 ${isExperience ? "font-bold" : "font-light"}`>Experience</a></li>
-      <li><a href="/projects" class=`hover:text-blue-600 ${isProjects ? "font-bold" : "font-light"}`>Projects</a></li>
+      <li><a href="/" class=`hover:underline ${isRoot ? "font-bold" : "font-light"}`>About me</a></li>
+      <li><a href="/experience" class=`hover:underline ${isExperience ? "font-bold" : "font-light"}`>Experience</a></li>
+      <li><a href="/projects" class=`hover:underline ${isProjects ? "font-bold" : "font-light"}`>Projects</a></li>
     </ul>
+  </nav>
+
+  <div class="md:hidden relative">
+    <input id="nav-toggle" type="checkbox" class="peer hidden" />
+    <label for="nav-toggle" class="inline-flex h-10 w-10 items-center justify-center rounded border border-[#B3B3B3] cursor-pointer" aria-controls="mobile-drawer" aria-label="Open menu">
+      <svg class="pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </label>
+
+    <div class="peer-checked:fixed peer-checked:inset-0 peer-checked:bg-black/30"></div>
+
+    <aside id="mobile-drawer" class="fixed inset-y-0 left-0 w-72 max-w-full -translate-x-full peer-checked:translate-x-0 transition-transform duration-300 ease-out border-r border-[#B3B3B3] bg-[#FFF3DF]">
+      <div class="h-full flex flex-col p-6 gap-4">
+        <div class="flex items-center justify-between">
+          <span class="text-lg font-semibold">Menu</span>
+          <label for="nav-toggle" class="inline-flex h-10 w-10 items-center justify-center rounded border border-[#B3B3B3] cursor-pointer" aria-label="Close menu">
+            <svg class="pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </label>
+        </div>
+        <nav>
+          <ul class="flex flex-col gap-4 text-lg">
+            <li><a href="/" class=`hover:underline ${isRoot ? "font-bold" : "font-light"}`>About me</a></li>
+            <li><a href="/experience" class=`hover:underline ${isExperience ? "font-bold" : "font-light"}`>Experience</a></li>
+            <li><a href="/projects" class=`hover:underline ${isProjects ? "font-bold" : "font-light"}`>Projects</a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
   </div>
-</nav>
+</div>
